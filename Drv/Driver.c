@@ -41,11 +41,11 @@ SDriverMod  g_stDriverLst[MAX_DRIVER_TYPE + 1] =
  						},
  						{
  							SYS_YES,
- 							NULLS,
- 							NULLS,
- 							NULLS,
- 							NULLS,
- 							NULLS,
+ 							SYS_YES,
+ 							dev_ExUartOpen,
+ 							dev_ExUartWrite,
+ 							dev_ExUartRead,
+ 							dev_ExUartIoctl,
  							0	
  						},
  						{
