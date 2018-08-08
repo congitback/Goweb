@@ -31,12 +31,6 @@ SDriverMod  g_stDriverLst[MAX_DRIVER_TYPE + 1] =
  							0	
  						},
  						{
- 							SYS_ERR,
- 							NULLS,
- 							NULLS,
- 							NULLS,
- 							NULLS,
- 							NULLS,
  							0	
  						},
  						{
