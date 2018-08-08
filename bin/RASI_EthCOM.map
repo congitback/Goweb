@@ -1,0 +1,394 @@
+******************************************************************************
+             TMS320C2000 Linker PC v5.2.3                      
+******************************************************************************
+>> Linked Thu Sep 08 14:39:21 2016
+
+OUTPUT FILE NAME:   <D:/SVN/RASPlatform/trunk/02Design/04Software/03COMSW/07Implement/RASI_COMNET/bin/RASI_EthCOM.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 003ef6dd
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+PAGE 0:
+  APPSTART              003ec000   0000000a  00000000  0000000a  RWIX
+  FLASH_CD              003ec00c   00001990  00000398  000015f8  RWIX
+  FLASH_AB              003ee000   00009f80  0000180b  00008775  RWIX
+  BEGIN_FLASH           003f7ff6   00000002  00000002  00000000  RWIX
+  H0SARAM1              003f8000   00000500  0000001e  000004e2  RWIX
+  RESET                 003fffc0   00000002  00000000  00000002  RWIX
+
+PAGE 1:
+  M0SARAM               00000000   00000800  00000200  00000600  RWIX
+  DEV_EMU               00000880   00000180  00000000  00000180  RWIX
+  FLASH_REGS            00000a80   00000060  00000000  00000060  RWIX
+  CSM                   00000ae0   00000010  00000000  00000010  RWIX
+  XINTF                 00000b20   00000020  00000000  00000020  RWIX
+  CPU_TIMER0            00000c00   00000008  00000000  00000008  RWIX
+  PIE_CTRL              00000ce0   00000020  00000000  00000020  RWIX
+  PIE_VECT              00000d00   00000100  00000000  00000100  RWIX
+  ECANA                 00006000   00000040  00000000  00000040  RWIX
+  ECANA_LAM             00006040   00000040  00000000  00000040  RWIX
+  ECANA_MOTS            00006080   00000040  00000000  00000040  RWIX
+  ECANA_MOTO            000060c0   00000040  00000000  00000040  RWIX
+  ECANA_MBOX            00006100   00000100  00000000  00000100  RWIX
+  SYSTEM                00007010   00000020  00000000  00000020  RWIX
+  SPIA                  00007040   00000010  00000000  00000010  RWIX
+  SCIA                  00007050   00000010  00000000  00000010  RWIX
+  XINTRUPT              00007070   00000010  00000000  00000010  RWIX
+  GPIOMUX               000070c0   00000020  00000000  00000020  RWIX
+  GPIODAT               000070e0   00000020  00000000  00000020  RWIX
+  ADC                   00007100   00000020  00000000  00000020  RWIX
+  EVA                   00007400   00000040  00000000  00000040  RWIX
+  EVB                   00007500   00000040  00000000  00000040  RWIX
+  SCIB                  00007750   00000010  00000000  00000010  RWIX
+  MCBSPA                00007800   00000040  00000000  00000040  RWIX
+  L0SARAM               00008000   00002000  00002000  00000000  RWIX
+  SRAM6                 00080000   00040000  0003dde2  0000221e  RWIX
+  DRAMBUFRAM            00100000   00000faa  00000000  00000faa  RWIX
+  CSM_PWL               003f7ff8   00000008  00000000  00000008  RWIX
+  H0SARAM               003f8500   00001500  00000a9f  00000a61  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.pinit     0    003ec00c    00000000     UNINITIALIZED
+
+.cinit     0    003ec00c    000002a0     
+                  003ec00c    00000103     Crc.obj (.cinit)
+                  003ec10f    00000103     FSB.obj (.cinit)
+                  003ec212    00000064     Driver.obj (.cinit)
+                  003ec276    00000013     dev_Timer.obj (.cinit)
+                  003ec289    0000000a     rts2800_ml.lib : _lock.obj (.cinit)
+                  003ec293    0000000a                    : exit.obj (.cinit)
+                  003ec29d    00000005     board.obj (.cinit)
+                  003ec2a2    00000004     AppTask.obj (.cinit)
+                  003ec2a6    00000004     ExPort.obj (.cinit)
+                  003ec2aa    00000002     --HOLE-- [fill = 0]
+
+.econst    0    003ec2ac    000000da     
+                  003ec2ac    00000022     dev_Interrupt.obj (.econst:.string)
+                  003ec2ce    0000001b     TL16C754.obj (.econst:.string)
+                  003ec2e9    00000001     --HOLE-- [fill = 0]
+                  003ec2ea    00000018     ExPort.obj (.econst:.string)
+                  003ec302    00000016     Proto.obj (.econst:.string)
+                  003ec318    00000015     FSB.obj (.econst:.string)
+                  003ec32d    00000001     --HOLE-- [fill = 0]
+                  003ec32e    00000013     W5300.obj (.econst:.string)
+                  003ec341    00000001     --HOLE-- [fill = 0]
+                  003ec342    00000011     AppTask.obj (.econst:.string)
+                  003ec353    00000001     --HOLE-- [fill = 0]
+                  003ec354    00000011     Queue.obj (.econst:.string)
+                  003ec365    00000001     --HOLE-- [fill = 0]
+                  003ec366    00000010     Driver.obj (.econst:.string)
+                  003ec376    00000008     TL16C754.obj (.econst:_gst_ExUartBaud)
+                  003ec37e    00000004     ExPort.obj (.econst:_gast_ExPortHandle)
+                  003ec382    00000004     TL16C754.obj (.econst:_gst_ExUartConf)
+
+secureRamFuncs 
+*          0    003ec386    0000001e     RUN ADDR = 003f8000
+                  003ec386    0000001e     dev_Flash.obj (secureRamFuncs)
+
+.QText     0    003ee000    00000a9f     RUN ADDR = 003f8500
+                  003ee000    0000006d     Crc.obj (.text)
+                  003ee06d    000000f4     Queue.obj (.text)
+                  003ee161    00000209     AppTask.obj (.text)
+                  003ee36a    0000034d     ExPort.obj (.text)
+                  003ee6b7    0000013d     FSB.obj (.text)
+                  003ee7f4    000002ab     Proto.obj (.text)
+
+.text      0    003eea9f    00000d6c     
+                  003eea9f    00000450     W5300.obj (.text)
+                  003eeeef    000003ac     TL16C754.obj (.text)
+                  003ef29b    00000173     Driver.obj (.text)
+                  003ef40e    000000e2     dev_Timer.obj (.text)
+                  003ef4f0    000000c7     dev_Interrupt.obj (.text)
+                  003ef5b7    000000a8     devMem.obj (.text)
+                  003ef65f    0000007e     board.obj (.text)
+                  003ef6dd    00000044     rts2800_ml.lib : boot.obj (.text)
+                  003ef721    0000002d     dev_SysClk.obj (.text)
+                  003ef74e    00000021     rts2800_ml.lib : memcpy_ff.obj (.text)
+                  003ef76f    0000001b                    : args_main.obj (.text)
+                  003ef78a    00000019                    : exit.obj (.text)
+                  003ef7a3    00000017     dev_Xintf.obj (.text)
+                  003ef7ba    00000013     Main.obj (.text)
+                  003ef7cd    0000000f     Schedule.obj (.text)
+                  003ef7dc    0000000d     dev_Flash.obj (.text)
+                  003ef7e9    0000000b     rts2800_ml.lib : u_div.obj (.text)
+                  003ef7f4    00000009                    : _lock.obj (.text)
+                  003ef7fd    00000007                    : memset.obj (.text)
+                  003ef804    00000007     startup.obj (.text)
+
+codestart 
+*          0    003f7ff6    00000002     
+                  003f7ff6    00000002     startup.obj (codestart)
+
+.reset     0    003fffc0    00000002     DSECT
+                  003fffc0    00000002     rts2800_ml.lib : boot.obj (.reset)
+
+.QBss      1    00000000    00000200     UNINITIALIZED
+                  00000000    00000100     Crc.obj (.ebss)
+                  00000100    00000100     FSB.obj (.ebss)
+
+.stack     1    00008000    00002000     UNINITIALIZED
+                  00008000    00002000     --HOLE--
+
+.bss       1    00080000    00000000     UNINITIALIZED
+
+.ebss      1    00080000    0003dde2     UNINITIALIZED
+                  00080000    000307d0     W5300.obj (.ebss)
+                  000b07d0    00000020     dev_Interrupt.obj (.ebss)
+                  000b07f0    00000008     dev_Timer.obj (.ebss)
+                  000b07f8    00000004     rts2800_ml.lib : _lock.obj (.ebss)
+                  000b07fc    00000004                    : exit.obj (.ebss)
+                  000b0800    00005d40     ExPort.obj (.ebss)
+                  000b6540    000041a0     Proto.obj (.ebss)
+                  000ba6e0    00000002     board.obj (.ebss)
+                  000ba6e2    0000001e     --HOLE--
+                  000ba700    00002898     TL16C754.obj (.ebss)
+                  000bcf98    00000028     --HOLE--
+                  000bcfc0    00000da4     AppTask.obj (.ebss)
+                  000bdd64    0000001c     --HOLE--
+                  000bdd80    00000062     Driver.obj (.ebss)
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+00080000   .bss
+003eea9f   .text
+003ef78a   C$$EXIT
+003ef7e9   U$$DIV
+003ef7ee   U$$MOD
+003f884b   _AppTaskRunHandle
+003f855e   _BYTEToDWORD
+003f8542   _DWORDToBYTE
+003f8ba2   _ExPortMod_Init
+003f8b28   _ExPortMod_OpenNet
+003f8a4c   _ExPortMod_Rev
+003f89db   _ExPortMod_RevHandle
+003f88ab   _ExPortMod_Send
+003f886a   _ExPort_Ioctl
+003ef6bf   _FlashRunLed
+003ef6be   _FlashRunLenTest
+003ec3a4   _Flash_Funcs_LoadEnd
+003ec386   _Flash_Funcs_LoadStart
+003f8000   _Flash_Funcs_RunStart
+003f8c33   _Fsb_DrawFrame
+003ef3fc   _InitDriverMod
+003ef4d9   _IsTimeOut
+003ef4c3   _IsTimeOutUs
+003ef65d   _MemCheck
+003ef607   _MemTestAddressBus
+003ef5ff   _MemTestDataBus
+003ef5b7   _MemTestDevice
+003ef54c   _ModINT_Init
+003ef51b   _ModINT_PollHandle
+003ef4f0   _ModINT_Rigster
+003f8f4c   _ProtoMod_Open
+003f8ef8   _ProtoMod_Rev
+003f8ea4   _ProtoMod_RevHandle
+003f8cf4   _ProtoMod_Send
+003eea9f   _QText_LoadEnd
+003ee000   _QText_LoadStart
+003f8500   _QText_RunStart
+003f8633   _Queue_Init
+003f856d   _Queue_IsValid
+003f85d7   _Queue_Read
+003f8578   _Queue_Write
+003ef6bd   _SOS_Assertion_Failed
+003ef7d7   _ScheduleForAPP
+003ef7ce   _ScheduleForInput
+003ef7cd   _ScheduleForOutput
+003eed0f   _W5300_Init
+003eec50   _W5300_SockRev
+003eeba5   _W5300_SockSnd
+003eea9f   _WD5300_SetSocketUDP
+0000a000   __STACK_END
+00002000   __STACK_SIZE
+00000001   __TI_args_main
+ffffffff   ___binit__
+00080000   ___bss__
+ffffffff   ___c_args__
+003ec00c   ___cinit__
+00080000   ___end__
+003ef80b   ___etext__
+003ef74e   ___memcpy_ff
+ffffffff   ___pinit__
+003eea9f   ___text__
+003ef76f   __args_main
+000b07fc   __cleanup_ptr
+000b07fe   __dtors_ptr
+000b07fa   __lock
+003ef7fc   __nop
+003ef7f8   __register_lock
+003ef7f4   __register_unlock
+00008000   __stack
+000b07f8   __unlock
+003ef78a   _abort
+000b6540   _auc_TmpBuf
+003ef6dd   _c_int00
+003ef7dc   _cpyFlashInitSect
+003ef4ab   _delay10Us
+003ef3f9   _dev_DrvRevSchedule
+003ef275   _dev_ExUartCheck
+003ef18b   _dev_ExUartIoctl
+003ef0e5   _dev_ExUartOpen
+003eef46   _dev_ExUartRead
+003eeeef   _dev_ExUartWrite
+003ef3a8   _dev_Ioctl
+003ef369   _dev_Open
+003ef31c   _dev_Read
+003ef2d0   _dev_Write
+003ef29b   _dev_check
+003ef78c   _exit
+000bdd80   _g_stDriverLst
+000b07d0   _gast_INTVect
+00080000   _gast_NetInfor
+003f8525   _getCrc
+003f8500   _getCrc16
+003ef4a7   _getMicrosecond
+003ef4a3   _getTick
+000ba740   _gst_ExUartRevBuf
+000baf80   _gst_ExUartSndBuf
+000bcfc0   _guc_InitFlag
+000b07f6   _gui_Microsecond
+000b07f4   _gui_Tick
+003ef6ae   _initBoard
+003f8000   _initFlash
+003ef721   _initSysCtrl
+003ef491   _initTimer0
+003ef7a3   _initXintfRegs
+003ef7ba   _main
+003ef7fd   _memset
+000b07f2   _ui_MsCount
+ffffffff   binit
+003ec00c   cinit
+00080000   end
+003ef80b   etext
+ffffffff   pinit
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000001   __TI_args_main
+00002000   __STACK_SIZE
+00008000   __stack
+0000a000   __STACK_END
+00080000   .bss
+00080000   ___bss__
+00080000   ___end__
+00080000   _gast_NetInfor
+00080000   end
+000b07d0   _gast_INTVect
+000b07f2   _ui_MsCount
+000b07f4   _gui_Tick
+000b07f6   _gui_Microsecond
+000b07f8   __unlock
+000b07fa   __lock
+000b07fc   __cleanup_ptr
+000b07fe   __dtors_ptr
+000b6540   _auc_TmpBuf
+000ba740   _gst_ExUartRevBuf
+000baf80   _gst_ExUartSndBuf
+000bcfc0   _guc_InitFlag
+000bdd80   _g_stDriverLst
+003ec00c   ___cinit__
+003ec00c   cinit
+003ec386   _Flash_Funcs_LoadStart
+003ec3a4   _Flash_Funcs_LoadEnd
+003ee000   _QText_LoadStart
+003eea9f   .text
+003eea9f   _QText_LoadEnd
+003eea9f   _WD5300_SetSocketUDP
+003eea9f   ___text__
+003eeba5   _W5300_SockSnd
+003eec50   _W5300_SockRev
+003eed0f   _W5300_Init
+003eeeef   _dev_ExUartWrite
+003eef46   _dev_ExUartRead
+003ef0e5   _dev_ExUartOpen
+003ef18b   _dev_ExUartIoctl
+003ef275   _dev_ExUartCheck
+003ef29b   _dev_check
+003ef2d0   _dev_Write
+003ef31c   _dev_Read
+003ef369   _dev_Open
+003ef3a8   _dev_Ioctl
+003ef3f9   _dev_DrvRevSchedule
+003ef3fc   _InitDriverMod
+003ef491   _initTimer0
+003ef4a3   _getTick
+003ef4a7   _getMicrosecond
+003ef4ab   _delay10Us
+003ef4c3   _IsTimeOutUs
+003ef4d9   _IsTimeOut
+003ef4f0   _ModINT_Rigster
+003ef51b   _ModINT_PollHandle
+003ef54c   _ModINT_Init
+003ef5b7   _MemTestDevice
+003ef5ff   _MemTestDataBus
+003ef607   _MemTestAddressBus
+003ef65d   _MemCheck
+003ef6ae   _initBoard
+003ef6bd   _SOS_Assertion_Failed
+003ef6be   _FlashRunLenTest
+003ef6bf   _FlashRunLed
+003ef6dd   _c_int00
+003ef721   _initSysCtrl
+003ef74e   ___memcpy_ff
+003ef76f   __args_main
+003ef78a   C$$EXIT
+003ef78a   _abort
+003ef78c   _exit
+003ef7a3   _initXintfRegs
+003ef7ba   _main
+003ef7cd   _ScheduleForOutput
+003ef7ce   _ScheduleForInput
+003ef7d7   _ScheduleForAPP
+003ef7dc   _cpyFlashInitSect
+003ef7e9   U$$DIV
+003ef7ee   U$$MOD
+003ef7f4   __register_unlock
+003ef7f8   __register_lock
+003ef7fc   __nop
+003ef7fd   _memset
+003ef80b   ___etext__
+003ef80b   etext
+003f8000   _Flash_Funcs_RunStart
+003f8000   _initFlash
+003f8500   _QText_RunStart
+003f8500   _getCrc16
+003f8525   _getCrc
+003f8542   _DWORDToBYTE
+003f855e   _BYTEToDWORD
+003f856d   _Queue_IsValid
+003f8578   _Queue_Write
+003f85d7   _Queue_Read
+003f8633   _Queue_Init
+003f884b   _AppTaskRunHandle
+003f886a   _ExPort_Ioctl
+003f88ab   _ExPortMod_Send
+003f89db   _ExPortMod_RevHandle
+003f8a4c   _ExPortMod_Rev
+003f8b28   _ExPortMod_OpenNet
+003f8ba2   _ExPortMod_Init
+003f8c33   _Fsb_DrawFrame
+003f8cf4   _ProtoMod_Send
+003f8ea4   _ProtoMod_RevHandle
+003f8ef8   _ProtoMod_Rev
+003f8f4c   _ProtoMod_Open
+ffffffff   ___binit__
+ffffffff   ___c_args__
+ffffffff   ___pinit__
+ffffffff   binit
+ffffffff   pinit
+
+[112 symbols]
